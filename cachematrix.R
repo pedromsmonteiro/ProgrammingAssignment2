@@ -1,3 +1,5 @@
+## Creating and cache the matrix we want to invert 
+
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
         set <- function(y) {
@@ -12,6 +14,7 @@ makeCacheMatrix <- function(x = matrix()) {
              get_inv = get_inv)
 }
 
+## Does the actual matrix inversion.
 cacheSolve <- function(x, ...) {
         m <- x$get_inv()
         if(!is.null(m)) {
